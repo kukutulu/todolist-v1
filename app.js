@@ -2,6 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js");
 const mongoose = require("mongoose");
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 
@@ -158,9 +161,7 @@ app.listen(3000, () => {
 });
 
 async function main() {
-  await mongoose.connect(
-    "mongodb+srv://pmt0014:pmt0014@cluster0.tgoduok.mongodb.net/todolistDB"
-  );
+  await mongoose.connect(process.env.MONGO);
   console.log("Connected to database");
 }
 
