@@ -1,0 +1,13 @@
+<%- include("header") %>
+<div class="box" id="heading"><h1>Your Lists</h1></div>
+
+<div class="box">
+  <% foundLists.forEach(item => { %>
+  <form action="" method="">
+    <div class="item">
+      <label><%= item.list %></label>
+    </div>
+  </form>
+  <% }); %>
+</div>
+<%- include("footer") %>
