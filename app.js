@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js");
 const mongoose = require("mongoose");
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 
 dotenv.config();
 
